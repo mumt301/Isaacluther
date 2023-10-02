@@ -1,0 +1,39 @@
+MUMT301-2021 Assignment 1
+QUESTIONNAIRE!
+
+The following questionnaire seeks to understand your previous knowledge about some of the concepts that we will learn in class during the coming term.
+
+1. Do you know any programming languages? If you do, which ones?
+HTML, CSS
+
+2. What is your primary computer operating system (OS)?
+Mac
+
+3. Do you own a smartphone, tablet, or mobile device? What is your favourite OS for mobile devices?
+Yes I own a I phone 11. I like the latest OS.
+
+4. Do you use any social networking services? If you do, which ones? Why?
+I use Instagram and Tik tok. They are very entertaining.
+
+5. Expand the following acronyms and do research about their meaning. You may look them up if you don't know:
+
+    HTTP: The foundation of the World Wide Web, and is used to load webpages using hypertext links.
+    REST: an architectural style for providing standards between computer systems on the web, making it easier for systems to communicate with each other.
+    API: refers to any software with a distinct function. Interface can be thought of as a contract of service between two applications. This contract defines how the two communicate with each other using requests and responses.
+
+6. Do you play a musical instrument or sing? If so, how much experience do you have?
+I play piano, guitar, trumpet and bass. I want to learn Sax and drums as well. I have been playing piano since I was 5 years old, Trumpet since I was 12 and guitar and bass recently.
+
+7. Can you read music notation? If so, how well?
+Yes, very well.
+
+8. How large is your personal music collection? Estimate the number of artists, albums, and songs. If instead you listen to music using streaming services, how many playlists, artists, albums, and songs do you have in your account?
+I listen to music all day, everyday so my collection is quite large. I listen to around 3000 Minutes a week I believe. I have around 8 main playlists with different moods for each one.
+
+9. How do you search and find new music? How do you think this affects the types of artists that you end up listening to?
+
+I am very aware of the current popular artists. I also like to listen to alot of artists from the 50s and I am constantly trying to find new artists from then.
+
+10. Name two musical artists that you like. What do you find interesting about their music that makes you like them?
+- Mac Miller: I love everything about his music. His voice, and production is beautiful.
+- Tyler the Creator: I love all of his music. Mainly the production behind his music. Its just so good.
