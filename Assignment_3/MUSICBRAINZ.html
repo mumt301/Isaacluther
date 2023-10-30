@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title> MusicBrainz_Album_Discography</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+
+}
+
+h1  {
+    text-align: center;
+    color: #333;
+    margin: 20px 0;
+    font-size: 48px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+
+}
+
+form {
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+}
+ label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+ }
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+
+}
+
+button  {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+ button:hover {
+    background-color: #555
+ }
+
+#albumList {
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+
+}
+ul {
+list-style:none;
+padding:0;
+
+}
+
+li{
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 16px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+li:hover{
+    background-color: #f7f7f7;
+    transform: translateX(5px);
+}
+</style>
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+<h1>Search for an Artist's Album Discography</h1>
+
+<form id="artistForm">
+<label for="artistName">Enter Artist Name:</label>
+<input type="text" id="artistName" required>
+<button type="submit">Search</button>
+</form>
+
+<div id="albumList">
+<!--this is where whatever album I choose information will be-->
+</div>
+
+<script>
+document.getElementById("artistForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    searchMusicBrainz();
+
+});
+
+function searchMusicBrainz() {
+    const artistName = document.getElementById("artistName").value;
+    const apiUrl = `https://musicbrainz.org/ws/2/release/?query=artist:"${encodeURIComponent(artistName)}"&fmt=json`;
+
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            displayAlbums(data.releases);
+        })
+        .catch(error=> {
+            console.error("Error fetching data from MusicBrainz API:", error);
+        });
+}
+function displayAlbums(albums) {
+
+    const albumList = document.getElementById("albumList");
+    albumList.innerHTML = "";
+
+    if (albums.length ===0) {
+        albumList.textContent = "No albums found for this artist.";
+    
+    } else {
+            const ul = document.createElement("ul");
+            albums.forEach(album => {
+                const li = document.createElement("li");
+                li.textContent = `${album.title} (Released: ${album.date})`;
+                ul.appendChild(li);
+
+            });
+            albumList.appendChild(ul);
+
+    
+    }
+}
+
+
+
+
+
+</script>
+
+
+</body>
+
+
+
+
+
+
+
+
+</html>
