@@ -1,0 +1,177 @@
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Audio Compression Comparison</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+}
+
+button {
+    display:block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056a1;
+
+}
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    background-color:#fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+caption {
+    font-size: 20px;
+    padding: 10px;
+    background-color: #0074d9;
+    color:#fff;
+    font-weight: bold;
+    text-align: left;
+}
+
+th, td {
+
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+th,td:first-child {
+    min-width: 150px
+}
+th,td:last-child {
+    min-width: 180px;
+}
+tr:nth-child(even) {
+background-color:#f2f2f2
+}
+tr:hover {
+    background-color: #e0e0e0;
+}
+a {
+    text-decoration: none;
+    color: #0074d9;
+    transition: color 0.3s
+}
+a:hover {
+    color: #0056a1
+}
+
+</style>
+
+
+
+
+
+
+</head>
+<body>
+    <button id="toggleTableButton">Toggle Tables</button>
+<table id="table1">
+<caption> Audio Source 1 Comparison</caption>
+<tr>
+    <th>FILENAME</th>
+    <th>COMPRESSION ALGORITHM</th>
+    <th>COMPRESSION BIT-RATE or QUALITY SETTING</th>
+    <th>ORIGINAL FILE SIZE</th>
+    <th>COMPRESSED FILE SIZE</th>
+    <th>COMPRESSION RATIO</th>
+    <th>LINK TO ORIGINAL VERSION</th>
+    <th>LINK TO COMPRESSED VERSION</th>
+    <th>LINNK TO RESIDUAL NOISE</th>
+</tr>
+<!-- this is where i will add my data for audio source 1-->
+<tr>
+    <td>BEAT 1</td>
+    <td>MP3</td>
+    <td>96 kbps</td>
+    <td>10.5MB</td>
+    <td>1.5MB</td>
+    <td>20%</td>
+    <td><a href="Audio 1 WAV.wav" target="_blank">Original</a></td>
+    <td><a href="Audio 1 compressed.mp3" target="_blank">Compressed</a></td>
+    <td><a href="Audio 1 residual.wav" target="_blank">Residual</a></td>
+</tr>
+
+
+</table>
+<table id="table2" style="display: none">
+<caption>Audio Source 2 Comparison</caption>
+<tr>
+<th>FILENAME</th>
+<th>COMPRESSION ALGORITHM</th>
+<th>COMPRESSION BIT-RATE or QUALITY SETTING</th>
+<th>ORIGINAL FILE SIZE</th>
+<th>COMPRESSED FILE SIZE</th>
+<th>COMPRESSION RATIO</th>
+<th>LINK TO ORIGINAL VERSION</th>
+<th>LINK TO COMPRESSED VERSION</th>
+<th>LINNK TO RESIDUAL NOISE</th>
+</tr>
+<!-- my data for source 2-->
+<tr>
+    <td>BEAT 2</td>
+    <td>Mp3</td>
+    <td>96kbps</td>
+    <td>10.6MB</td>
+    <td>1.6MB</td>
+    <td>20%</td>
+    <td><a href="Audio 2 WAV.wav" target="_blank">Original</a></td>
+    <td><a href="Audio 2 compressed.mp3" target="_blank">Compressed</a></td>
+    <td><a href="Audio 2 residual.wav" target="_blank">Residual</a></td>
+</tr>
+</table>
+ <script>
+
+const toggleTableButton = document.getElementById("toggleTableButton");
+const table1 = document.getElementById("table1");
+const table2 = document.getElementById("table2");
+
+toggleTableButton.addEventListener("click", () => {
+    if (table1.style.display === "none") {
+        table1.style.display = "table";
+        table2.style.display = "none";
+
+    } else {
+        table1.style.display = "none";
+        table2.style.display = "table";
+
+    }
+
+});
+
+ </script>
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>
